@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School of Liberal Studies (SLS)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #800000;
+            --secondary-color: #A52A2A;
+            --accent-color: #B22222;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .logo {
+            height: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .title {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Course List Styles */
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        /* Fee Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Contact Section Styles */
+        #contact {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        #contact p {
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .title {
+                font-size: 1.8rem;
+            }
+
+            .section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="./index.html">
+            <img src="./image/logo-removebg-preview.png" alt="PDEU Logo" class="logo">
+        </a>
+        <h1 class="title">School of Liberal Studies (SLS)</h1>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#fees">Fees</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="section">
+        <div class="container">
+            <h2>Admissions</h2>
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <p class="lead mb-4">Admissions for the School of Liberal Studies are open. Apply now for Undergraduate and Postgraduate programs.</p>
+                    <a href="admissions.html" class="btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2>Courses Offered</h2>
+            <ul>
+                <li>Bachelor of Arts (B.A.) - International Relations, Public Policy</li>
+                <li>Bachelor of Business Administration (BBA)</li>
+                <li>Master of Arts (M.A.)</li>
+                <li>Master of Business Administration (MBA)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Fees Section -->
+    <section id="fees" class="section">
+        <div class="container">
+            <h2>Fee Structure</h2>
+            <div class="table-responsive">
+                <table>
+                    <tr>
+                        <th>Program</th>
+                        <th>Annual Fees</th>
+                    </tr>
+                    <tr>
+                        <td>B.A. / BBA</td>
+                        <td>₹1,50,000 per year</td>
+                    </tr>
+                    <tr>
+                        <td>M.A. / MBA</td>
+                        <td>₹2,00,000 per year</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="contact-info text-center">
+                        <p><i class="fas fa-envelope me-2"></i>Email: sls@pdeu.edu.in</p>
+                        <p><i class="fas fa-phone me-2"></i>Phone: +91-1234567890</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Address: PDEU Campus, Gandhinagar, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
