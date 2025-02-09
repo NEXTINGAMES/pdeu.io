@@ -58,7 +58,7 @@
 
         /* Enhanced Banner */
         .banner {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./image/main_photo.jpeg');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./image/DJI_20231018112321_0027_D_DJISID3PRO\ \(1\).jpg');
             height: 500px;
             display: flex;
             align-items: center;
@@ -274,6 +274,22 @@
         .social-links a:hover {
             color: var(--accent-color);
         }
+        .excellence-carousel {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .carousel-item {
+            padding: 0 15%;
+        }
+
+        .excellence-item {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
 
         /* Animations */
         @keyframes fadeIn {
@@ -302,6 +318,59 @@
             .banner-content {
                 padding: 0 10px;
             }
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Excellence Centers Section */
+        .excellence-centers {
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .center-slide {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .center-slide img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* Accreditations Section */
+        .accreditations {
+            background-color: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .accreditation-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 1rem 0;
+        }
         }
     </style>
 </head>
@@ -309,19 +378,18 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="./index.html">
-                <img src="./image/logo-removebg-preview.png" alt="PDEU Logo" class="navbar-logo me-2">
-                PDEU
+            <a class="navbar-brand" href="#home">
+                <img src="./image/Logo - NEw.png" alt="PDEU Logo" class="navbar-logo">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="./blog.html">blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#departments">Departments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#excellence">Excellence</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -344,36 +412,79 @@
         <div class="container">
             <div class="about-content">
                 <h2 class="text-center mb-4">About PDEU</h2>
-                <p>Pandit Deendayal Energy University (PDEU) is a premier university located in Gandhinagar, Gujarat, focusing on energy and technology education. Established in 2007 as a Petroleum University, PDEU has evolved into India's only energy university, dedicated to cutting-edge research and comprehensive education in energy sectors.</p>
+                <div class="ratio ratio-16x9 mb-4">
+                    <iframe src="https://www.youtube.com/embed/DD2nxhFowFk" title="About PDEU" allowfullscreen></iframe>
+                </div>
+                <p>Pandit Deendayal Energy University (PDEU) is a premier university located in Gandhinagar, Gujarat, focusing on energy and technology education. Established in 2007, PDEU has evolved into India's only energy university, dedicated to cutting-edge research and comprehensive education in energy sectors.</p>
                 <p>Today, PDEU stands as a beacon of excellence with significant national and international recognition, actively contributing to India's AatmaNirbhar Bharat initiative through innovative research and industry collaboration.</p>
             </div>
         </div>
     </section>
 
-    <!-- Departments Section -->
+    <section class="accreditations">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Accreditations</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="accreditation-item">
+                        <h4>NAAC A++</h4>
+                        <p>Accredited</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="accreditation-item">
+                        <h4>Top 150</h4>
+                        <p>Universities in India by NIRF 2024 Rankings</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="accreditation-item">
+                        <h4>Centre of Excellence</h4>
+                        <p>Status by Govt. of Gujarat</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="accreditation-item">
+                        <h4>5 Star Plus</h4>
+                        <p>Rating by GSIRF 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
     <section id="departments" class="container my-5">
-        <h2 class="text-center mb-4">Our Schools</h2>
+        <h2 class="text-center mb-4">Our Programs</h2>
         <div class="departments">
             <div class="dept-card">
-                <img src="./image/trc.jpeg" alt="School of Technology" class="dept-image">
+                <img src="./image/trc.jpeg" alt="Engineering & Technology" class="dept-image">
                 <div class="dept-content">
-                    <h3 class="dept-title">School of Technology</h3>
+                    <h3 class="dept-title">Engineering & Technology</h3>
                     <p>Offering cutting-edge programs in engineering and technology with a focus on energy sector innovations.</p>
                     <a href="./sot.html" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
             <div class="dept-card">
-                <img src="./image/solar.jpeg" alt="School of Management" class="dept-image">
+                <img src="./image/solar.jpeg" alt="Sciences" class="dept-image">
                 <div class="dept-content">
-                    <h3 class="dept-title">School of Management</h3>
+                    <h3 class="dept-title">Sciences</h3>
                     <p>Developing future business leaders with specialized focus on energy sector management.</p>
                     <a href="./som.htm" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
             <div class="dept-card">
-                <img src="./image/ilove_pdeu.jpeg" alt="School of Liberal Studies" class="dept-image">
+                <img src="./image/ilove_pdeu.jpeg" alt="Liberal Studies" class="dept-image">
                 <div class="dept-content">
-                    <h3 class="dept-title">School of Liberal Studies</h3>
+                    <h3 class="dept-title">Liberal Studies</h3>
+                    <p>Providing holistic education combining liberal arts with technical knowledge.</p>
+                    <a href="./sls.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="dept-card">
+                <img src="./image/ilove_pdeu.jpeg" alt="Management" class="dept-image">
+                <div class="dept-content">
+                    <h3 class="dept-title">Management</h3>
                     <p>Providing holistic education combining liberal arts with technical knowledge.</p>
                     <a href="./sls.html" class="btn btn-primary">Learn More</a>
                 </div>
@@ -381,21 +492,19 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="container my-5">
-        <h2 class="text-center mb-4">Campus Gallery</h2>
-        <div class="image-gallery">
-            <div class="gallery-item">
-                <img src="./image/cateen.jpeg" alt="Campus View 1">
-            </div>
-            <div class="gallery-item">
-                <img src="./image/65b3779cf06a0.jpeg" alt="Campus View 2">
-            </div>
-            <div class="gallery-item">
-                <img src="./image/9.jpg" alt="Campus View 3">
-            </div>
-            <div class="gallery-item">
-                <img src="./image/GDpKr9CacAADGzm.jpg" alt="Campus View 4">
+    <section id="excellence" class="excellence-carousel">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Centres of Excellence</h2>
+            <div id="excellenceCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Carousel items will be populated by JavaScript -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#excellenceCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#excellenceCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </section>
@@ -403,22 +512,17 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
+            <h2 class="text-center mb-4">Contact Us</h2>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt contact-icon"></i>
                     <h3>Address</h3>
-                    <p>PDEU, Gandhinagar, Gujarat, India</p>
+                    <p>Knowledge Corridor, Raisan,<br>Gandhinagar, Gujarat – 382426, India</p>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone contact-icon"></i>
-                    <h3>Phone</h3>
-                    <p>+91-79-23275060</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <h3>Email</h3>
-                    <p>info@pdeu.ac.in</p>
+                    <i class="fas fa-globe contact-icon"></i>
+                    <h3>Website</h3>
+                    <p><a href="http://www.pdeu.ac.in" class="text-white">www.pdeu.ac.in</a></p>
                 </div>
             </div>
         </div>
@@ -432,39 +536,67 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#departments">Departments</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#excellence">Centres of Excellence</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Connect With Us</h3>
+                    <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/pdeuofficial" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pdeuofficial/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@panditdeendayalenergyunive9541" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/school/pdeuofficial/" target="_blank"><i class="fab fa-linkedin"></i></a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Subscribe to Newsletter</h3>
-                    <form class="mt-3">
-                        <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
-                        </div>
-                    </form>
                 </div>
             </div>
             <div class="text-center pt-3 border-top">
+                <p>Pandit Deendayal Energy University</p>
+                <p>Knowledge Corridor, Raisan, Gandhinagar, Gujarat – 382426, India</p>
+                <p><a href="http://www.pdeu.ac.in" class="text-white">www.pdeu.ac.in</a></p>
                 <p>&copy; 2025 Pandit Deendayal Energy University. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Smooth scrolling for navigation links
+        // Centres of Excellence Data
+        const centres = [
+            "Semiconductor Packaging Skill Training Centre (ATMP)",
+            "Solar PV Panel Assembly Line (45 Mw)",
+            "Solar Research Development Centre (SRDC)",
+            "1 MW Solar Power Plant Integrated to Grid",
+            "Smart Hybrid Microgrid - Battery Energy Storage (100 Kwh)",
+            "Centre For Water Treatment And Waste Water Management",
+            "Maruti International Automobile Centre Of Excellence (IACE)",
+            "Siemens Centre Of Excellence For Automation",
+            "Additive Manufacturing (3d Metal Printing) (Ti/Co-Cr)",
+            "Innovation & Incubation Centre (IIC)",
+            "Centre For Bio-Fuel And Bio-Energy Studies (CBBS)",
+            "Bio Diesel Plant (100 L/Hr)",
+            "Drilling Cementing & Stimulation Centre (DCS)",
+            "Centre Of Excellence For Geothermal Energy (CEGE)",
+            "Carbon Capture And Sequestration (1 TPD)",
+            "Green Hydrogen"
+        ];
+
+        // Populate Carousel
+        const carouselInner = document.querySelector('.carousel-inner');
+        centres.forEach((centre, index) => {
+            const div = document.createElement('div');
+            div.className = 'carousel-item' + (index === 0 ? ' active' : '');
+            div.innerHTML = `
+                <div class="excellence-item">
+                    <h4>${centre}</h4>
+                </div>
+            `;
+            carouselInner.appendChild(div);
+        });
+
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -478,7 +610,7 @@
             });
         });
 
-        // Navbar background color change on scroll
+        // Navbar background change on scroll
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -491,20 +623,6 @@
         // Initialize Bootstrap tooltips
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-
-        // Form validation for newsletter subscription
-        const newsletterForm = document.querySelector('form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const emailInput = this.querySelector('input[type="email"]');
-                if (emailInput.value) {
-                    // Here you would typically send this to your backend
-                    alert('Thank you for subscribing to our newsletter!');
-                    emailInput.value = '';
-                }
-            });
-        }
     </script>
 </body>
 </html>
